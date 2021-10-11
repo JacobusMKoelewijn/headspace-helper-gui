@@ -1,0 +1,14 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+openpyxl = "==3.0.9"
+pyqt5-tools = "==5.15.4.3.2"
+pyinstaller = "==4.5.1"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"
