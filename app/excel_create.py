@@ -6,6 +6,9 @@ from .extract_data import solvents, diluent, solvents_area_height_A, solvents_ar
 
 def add_excel():
     try:
+
+        # Improve logic, pythonify further.
+
         # 1. Diluent
         solvent_sheets[solvents[0]]["A22"] = diluent
         solvent_sheets[solvents[0]]["B22"] = solvents_CoA_data[diluent][0]
@@ -21,7 +24,7 @@ def add_excel():
             solvent_sheets[i]["C27"] = solvents_CoA_data[i][1]
             solvent_sheets[i]["D27"] = solvents_CoA_data[i][2]
             solvent_sheets[i]["E27"] = solvents_CoA_data[i][3][:-1]
-            solvent_sheets[i]["F27"] = solvents_CoA_data[i][4][:-4]
+            solvent_sheets[i]["F27"] = solvents_CoA_data[i][4][:-4].replace("_","")
 
             # 6. Data for Calibration curve (Peak Area / Peak Height)
         
@@ -42,11 +45,13 @@ def add_excel():
                 solvent_sheets[i][f"G{94 + j}"] = solvents_area_height_B[i][3 + j][0]
         
         wb.save("HS_Quantification Template11.xlsx")
-        print("All data has been transferred succesfully!")
+        
+        print("All data has been transferred succesfully! Enjoy your coffee.")
     
     except:
-        print("OPERATION FAILED - Something went wrong... shutting down.")
-        sleep(10)
+        print("OPERATION FAILED - Something went wrong... Try again and follow instructions carefully.")
+
+        sleep(5)
         sys.exit()
     
     sleep(5)

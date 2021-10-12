@@ -4,9 +4,36 @@ from PyQt5.QtWidgets import QApplication, QMainWindow
 import sys
 import os
 
-print("workSmart 0.3.1")
+print("workSmart 0.4")
 print("Author: J. M. Koelewijn")
 print("")
+
+
+try:
+    os.mkdir("rawdata")
+    with open('rawdata\\___ NOTE - Add raw data files. e.g. A1, A2, etc., B3.1, B3.2, etc..txt', 'w') as myfile:
+        pass
+    os.mkdir("CoA")
+    with open('CoA\\___ NOTE - Use standardized format only. e.g. Solvent  Manufacturer  Catalog #  Lot #  Purity [00,00%]  Expiration date [month_yyyy].txt', 'w') as myfile:
+        pass
+    
+    print("The rawdata and CoA folders have been automatically created.\nMake sure both folders contain the right data.\n")
+except:
+    print("Directories 'rawdata' and 'CoA' already exist.\nMake sure both folders contain the right data.\n")
+
+print("Place 'HS_Quantification Template11.xlsx' in the root folder\nMake sure the sheets are named using the correct solvent abreviations.\n")
+
+print("press any key to continue...")
+
+input() # better way to do this?
+
+from app import excel_create # Might be a better way to do this?
+
+# window()
+
+# ///////////////////////////////////
+# ///////////////////////////////////
+
 
 # class Mywindow(QMainWindow):
 #     def __init__(self):
@@ -42,35 +69,6 @@ print("")
 #     win = Mywindow()
 #     win.show()
 #     sys.exit(app.exec_()) # Required for clean exit
-
-           
-
-try:
-    os.mkdir("rawdata")
-    with open('rawdata\\___ NOTE - Add raw data files. e.g. A1, A2, A3, B3.1, B3.2, B3.3.txt', 'w') as myfile:
-        pass
-    os.mkdir("CoA")
-    with open('CoA\\___ NOTE - Use standardized format. e.g. Solvent   Manufacturer   Catalog #   Lot #   Purity [00,00]   Exp date [Monthyyyy].txt', 'w') as myfile:
-        pass
-    
-    print("The rawdata and CoA folders have been created.")
-except:
-    print("Directories 'rawdata' and 'CoA' already exist.")
-    print("Make sure both folders are empty.")
-    print("")
-
-print("Add all necessary data in the respective folders")
-print("Make sure 'HS_Quantification Template11.xlsx' is placed in the root folder and the sheetnames equal the solventnames.")
-print("press any key to continue...")
-
-input() # better way to do this?
-
-from app import excel_create # Might be a better way to do this?
-
-# window()
-
-# ///////////////////////////////////
-# ///////////////////////////////////
 
 
 # def update(self):

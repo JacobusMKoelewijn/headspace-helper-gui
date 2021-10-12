@@ -1,24 +1,25 @@
+####################################
+# To suppress a warning by openpyxl.
+import warnings
+warnings.simplefilter("ignore")
+####################################
+
 from app import sys
 from app import openpyxl
 from app import sleep
+from app import available_solvent_list
 
 try:
     wb = openpyxl.load_workbook("HS_Quantification Template11.xlsx")
-    print("Excel file has been found!")
-    print("")
-except:
-    print("OPERATION FAILED - Excel file not found. ")
-    print("Please copy an instance of 'HS_Quantification Template11.xltx' to the root directory.")
-    sleep(10)
-    sys.exit()
+    print("HS_Quantification Template11.xlsx file has been found!\n")
 
-from .extract_data import solvents
+    solvents = [i for i in wb.sheetnames if i in available_solvent_list]
 
-try:
-    solvent_sheets = {}
-    for i in solvents:
-        solvent_sheets[i] = wb[i]
+    # Is this required? Can it be more simple?
+    solvent_sheets = {i: wb[i] for i in solvents}
+
 except:
-    print("OPERATION FAILED - Make sure the sheetnames in 'HS_Quantification Template11.xlsx' match your solvents input.")
-    sleep(10)
+    print("OPERATION FAILED - Excel file not found.\nPlease copy an instance of 'HS_Quantification Template11.xltx' to the root directory.\n")
+
+    sleep(5)
     sys.exit()

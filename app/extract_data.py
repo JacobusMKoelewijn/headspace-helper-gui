@@ -1,5 +1,7 @@
 from app import listdir
 from app import Path
+from .excel_init import solvents
+from app import available_diluent_list
 
 def find_solvent_data(i, j):
     solvent_found = False
@@ -19,8 +21,8 @@ coa_data = [file for file in listdir(Path("CoA")) if not file.startswith('___')]
 
 A_rawdata.reverse()
 
-print('Enter solvent(s) separated by a space. e.g.: "DCM Toluene Heptane ..."')
-solvents = input().split()
+# print('Enter solvent(s) separated by a space. e.g.: "DCM Toluene Heptane ..."')
+# solvents = input().split()
 
 solvents_area_height_A =  {j: [find_solvent_data(i, j) for i in A_rawdata] for j in solvents}
 solvents_area_height_B =  {j: [find_solvent_data(i, j) for i in B_rawdata] for j in solvents}
