@@ -2,3 +2,6 @@
 rawdata/
 CoA/
 *.xlsx
+dist/
+build/
+workSmart.spec
