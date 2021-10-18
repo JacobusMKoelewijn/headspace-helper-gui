@@ -5,3 +5,7 @@ CoA/
 dist/
 build/
 workSmart.spec
+icon/
+icon.ico
+__pycache__/
+*.spec

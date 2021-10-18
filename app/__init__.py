@@ -16,7 +16,7 @@ available_solvent_list = [
     "iPrOAc",
     "IPA", 
     "MeOH", 
-    "MeCN", 
+    "ACN", 
     "EtOAc", 
     "EtOH", 
     "TBME", 
