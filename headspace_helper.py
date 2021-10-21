@@ -5,7 +5,9 @@ from PyQt5.QtCore import QRect
 import sys
 import os
 
-from app import available_solvent_list
+from app import template
+
+from app.list_of_solvents_and_diluents import list_of_solvents
 
 solvents_supported = ""
 
@@ -83,8 +85,12 @@ class MainWindow(QMainWindow):
         self.update()
     
     def operate(self):
-        from app.excel_create import add_excel
-        self.label_7.setText(add_excel())
+        # from app.excel_create import add_excel
+        template.add_coa_data()
+        template.add_area_height_data_A()
+        template.add_area_height_data_B()
+        template.save_template()
+        self.label_7.setText(template.return_collected_messages())
         self.label_7.adjustSize()
 
     def update(self):
@@ -95,7 +101,7 @@ class MainWindow(QMainWindow):
         self.label_5.adjustSize()
         self.label_6.adjustSize()
 
-for i in available_solvent_list:
+for i in list_of_solvents:
     solvents_supported += i + "\n"
 
 if __name__ == '__main__':
