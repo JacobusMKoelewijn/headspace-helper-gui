@@ -5,7 +5,10 @@ CoA/
 dist/
 build/
 workSmart.spec
-icon/
+icons/
 icon.ico
 __pycache__/
 *.spec
+ui_interface.ui
+icons.qrc
+notes.txt

@@ -1,9 +1,14 @@
+v 0.8
+- Introduced modern and dynamic GUI.
+
+v 0.7
+- Reorganized code. Introduced Class Template.
+- Updated GUI layout.
+
 v 0.6
 - App now has a GUI and will no longer display the console.
 
-
 v 0.5
-
 - Changed the order of the CoA format to: Solvent  Manufacturer  Catalog #  Lot #  Expiration date (mmmyyyy)  purity (00.00%).pdf
 - Added an improved "___ NOTE" message in CoA folder to explain the correct format including an example.
 - App will stop searching A and B txt files once a solvent has been found to avoid the extraction of incorrect data.

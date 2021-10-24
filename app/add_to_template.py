@@ -11,16 +11,18 @@ class Template:
     def __init__(self):
         self.collected_messages = ""
         self.collected_none_coa = ""
-        self.find_template_file()
-        self.find_solvents()        
+        self.template_found = False
+        self.find_template_file()        
    
     def find_template_file(self):
         try:
             self.wb = openpyxl.load_workbook("HS_Quantification Template11.xlsx")
             self.collected_messages += "The template file has been found!\n\n"
+            self.template_found = True
+            self.find_solvents()
 
         except:
-            self.collected_messages += "OPERATION FAILED - Template was not found.\n\nPlease copy an instance of 'HS_Quantification Template11.xltx'\nto the root directory.\n"
+            self.collected_messages += "OPERATION FAILED - Template was not found.\n\nPlace a copy of 'HS_Quantification Template11.xlsx'\nto the root directory.\n"
             return self.collected_messages
 
     def find_solvents(self):
@@ -38,7 +40,7 @@ class Template:
             self.solvent_sheets[self.solvents[0]]["C22"] = solvents_CoA_data[self.diluent][1]
             self.solvent_sheets[self.solvents[0]]["D22"] = solvents_CoA_data[self.diluent][2]   
         except:
-            self.collected_messages += "CoA of diluent not provided or incorect abreviation is used.\n\n"
+            self.collected_messages += "CoA of diluent not provided or incorect abreviation is used.\n"
         
         # CoA for reference standards:
         for i in self.solvents:
@@ -52,7 +54,7 @@ class Template:
             except:
                 self.collected_none_coa += i + ", "
     
-        if self.collected_none_coa != "": self.collected_messages += f"CoA data of {self.collected_none_coa[:-2]} not provided or incorect abbreviation is used.\n\n"
+        if self.collected_none_coa != "": self.collected_messages += f"CoA data of {self.collected_none_coa[:-2]} not provided or incorect abbreviation is used.\n"
 
     def add_area_height_data_A(self):
 
@@ -63,7 +65,7 @@ class Template:
         for i in self.solvents:
             try:
                 if((number_of_A_files) < 8) or (number_of_A_files > 9):
-                    self.collected_messages += "OPERATION FAILED - Either 8 or 9 A-files have to be supplied."
+                    self.collected_messages += "OPERATION FAILED - Either 8 or 9 A-files have to be supplied.\n"
                     return self.collected_messages
      
                 for j in range(number_of_A_files - 4):
@@ -76,10 +78,10 @@ class Template:
                     self.solvent_sheets[i][f"I{65 - j}"] = solvents_area_height_A[i][j - 4][1]
             
             except:
-                self.collected_messages += "OPERATION FAILED - Something went wrong with the A files.\n\n"
+                self.collected_messages += "OPERATION FAILED - Something went wrong with the A files.\n"
                 return self.collected_messages
     
-        self.collected_messages += "Data of A files have been transferred succesfully!\n\n"
+        self.collected_messages += "Data of A files have been transferred succesfully!\n"
 
     def add_area_height_data_B(self):
 
@@ -99,10 +101,10 @@ class Template:
             
 
             except:
-                self.collected_messages += "OPERATION FAILED - Something went wrong with the B files.\n\n"
+                self.collected_messages += "OPERATION FAILED - Something went wrong with the B files.\n"
                 return(self.collected_messages)
         
-        self.collected_messages += "Data of B files have been transferred succesfully!\n\n"
+        self.collected_messages += "Data of B files have been transferred succesfully!\n"
 
     def save_template(self):
         self.wb.save("HS_Quantification Template11.xlsx")
