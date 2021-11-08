@@ -239,12 +239,12 @@ class Ui_MainWindow(object):
         # Maybe remove later. Might not be necessary.
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Headspace Helper"))
-        self.solvents_title.setText(_translate("MainWindow", "Use correct abbreviations:"))
+        self.solvents_title.setText(_translate("MainWindow", "Use correct abbreviation:"))
         self.solvents.setText(_translate("MainWindow", "TextLabel"))
         self.solvents_btn.setText(_translate("MainWindow", " Solvents"))
         self.information_top.setText(_translate("MainWindow", "TextLabel"))
-        self.information_bottom.setText(_translate("MainWindow", "Ready for extraction"))
-        self.app_info.setText(_translate("MainWindow", "Headspace Helper v 0.8.0  J. M. Koelewijn"))
+        self.information_bottom.setText(_translate("MainWindow", "Ready for extraction!"))
+        self.app_info.setText(_translate("MainWindow", "Headspace Helper v 0.8.1  J. M. Koelewijn"))
         self.extract_data_btn.setText(_translate("MainWindow", " Extract data"))
 
 import icons_rc

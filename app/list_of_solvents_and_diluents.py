@@ -4,7 +4,7 @@ list_of_solvents = [
     "2-BuOH",
     "2-MeTHF",
     "n-PrOH",
-    "acetone", 
+    "Acetone", 
     "DCM", 
     "DMF",
     "iPrOAc",
@@ -14,7 +14,7 @@ list_of_solvents = [
     "EtOAc", 
     "EtOH", 
     "TBME", 
-    "pentane", 
+    "Pentane", 
     "Et2O", 
     "THF", 
     "DMSO"
