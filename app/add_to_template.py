@@ -114,6 +114,7 @@ class Template:
         
     def add_coa_data(self):
         from .extract_data_from_files import solvents_CoA_data
+        
         self.diluent = "NMP" if "NMP" in solvents_CoA_data.keys() else ""
 
         # CoA for diluent:
@@ -133,7 +134,7 @@ class Template:
                 self.solvent_sheets[i]["C27"] = solvents_CoA_data[i][1]
                 self.solvent_sheets[i]["D27"] = solvents_CoA_data[i][2]
                 self.solvent_sheets[i]["F27"] = solvents_CoA_data[i][3][:3] + " " + solvents_CoA_data[i][3][3:]
-                self.solvent_sheets[i]["E27"] = solvents_CoA_data[i][4][:-5].replace(".",",") ## In case of dutch version of Excel.
+                self.solvent_sheets[i]["E27"] = float(solvents_CoA_data[i][4][:-5])
             except:
                 self.collected_none_coa += i + ", "
     

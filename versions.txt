@@ -1,3 +1,19 @@
+Ideas for development:
+- Increase capacity of solvent list to show abbreviations. Add a 2nd list.
+- Differentiate between expiration date and open date for solvents:
+- Problems might arise with samples starting with an A or B!
+- Make sure when checking for solvents the right line is checked!
+- Add the syntax for samples to UI.
+- Check clearly what is necessary: Either peak table or Compound results!
+- Standardize the rawfile output!
+- Standardize the template input!
+
+
+v 0.8.2
+- Improved the find_solvent_data function. Should now always return the correct data.
+- Solvent data and some CoA data is now added as either integer or float to template instead of string.
+- A and B files are now distinguished from Sample files.
+
 v 0.8.1
 - Improved chart layout
 - Removed incorrect reference on cell E38
