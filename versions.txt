@@ -1,16 +1,25 @@
 Ideas for development:
-- Increase capacity of solvent list to show abbreviations. Add a 2nd list.
-- Differentiate between expiration date and open date for solvents:
-- Problems might arise with samples starting with an A or B!
-- Make sure when checking for solvents the right line is checked!
-- Add the syntax for samples to UI.
-- Check clearly what is necessary: Either peak table or Compound results!
-- Standardize the rawfile output!
-- Standardize the template input!
+- How to deal with heptane and 1,4-dioxane?
+- Document the syntax for samples clearly! ALso note the order!!
 
+v 1.0
+- Cleaned up code, solved minor bugs.
+
+v 0.9
+- Added error handling.
+- Changed help menu content
+
+v 0.8.4
+- 12 solvents, 8 samples, 8 B-Files
+- Now ignores blank files if added.
+- Add errors
+
+v 0.8.3
+- Compatible with newest template.
+- Improved the find_solvent data function. Can now select correct data from unmodified rawdata file.
 
 v 0.8.2
-- Improved the find_solvent_data function. Should now always return the correct data.
+- Improved the find_solvent_data function. Should now always return the correct data if rawdata file output contains "[Peak Table (Ch1)]"
 - Solvent data and some CoA data is now added as either integer or float to template instead of string.
 - A and B files are now distinguished from Sample files.
 

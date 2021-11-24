@@ -236,15 +236,14 @@ class Ui_MainWindow(object):
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
-        # Maybe remove later. Might not be necessary.
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Headspace Helper"))
-        self.solvents_title.setText(_translate("MainWindow", "Use correct abbreviation:"))
+        self.solvents_title.setText(_translate("MainWindow", "Reminder:"))
         self.solvents.setText(_translate("MainWindow", "TextLabel"))
-        self.solvents_btn.setText(_translate("MainWindow", " Solvents"))
+        self.solvents_btn.setText(_translate("MainWindow", " Help menu"))
         self.information_top.setText(_translate("MainWindow", "TextLabel"))
         self.information_bottom.setText(_translate("MainWindow", "Ready for extraction!"))
-        self.app_info.setText(_translate("MainWindow", "Headspace Helper v 0.8.2  J. M. Koelewijn"))
+        self.app_info.setText(_translate("MainWindow", "Headspace Helper v 1.0  J. M. Koelewijn"))
         self.extract_data_btn.setText(_translate("MainWindow", " Extract data"))
 
 import icons_rc
