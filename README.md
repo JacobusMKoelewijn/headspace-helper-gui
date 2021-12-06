@@ -1,2 +1,2 @@
 # workSmart
-A simple tool to collect and manipulate data from txt to excel.
+A tool to help collect and add data from text files to excel templates.

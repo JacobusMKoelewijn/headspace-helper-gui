@@ -63,7 +63,7 @@ try:
 except:
     pass
 
-# Generate a library for every solvent with retention time, peak area, and peak height extracted for every A, B and sample file:    
+# Generate a dictionary for every solvent with retention time, peak area, and peak height extracted for every A, B and sample file:    
 solvents_area_height_A = {j: [find_solvent_data(i, j) for i in sorted(collected_A_files, key=lambda x: int(x[:x.index("_")].replace("A","")) )] for j in solvents}
 solvents_area_height_B = {j: [find_solvent_data(i, j) for i in sorted(collected_B_files, key=lambda x: int(x[x.index("_") - 1] ))] for j in solvents}
 solvents_area_height_samples = {z: {j: [find_solvent_data(i, j) for i in collected_sample_files if z in i] for j in solvents} for z in unique_samples}
