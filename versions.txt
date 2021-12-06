@@ -1,6 +1,10 @@
 Ideas for development:
-- How to deal with heptane and 1,4-dioxane?
+- Add heptanes.
+- Change syntax of sample format in help menu.
 - Document the syntax for samples clearly! ALso note the order!!
+
+v 1.1
+- Fixed sorting issue for A-files.
 
 v 1.0
 - Cleaned up code, solved minor bugs.

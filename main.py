@@ -22,7 +22,7 @@ class MainWindow(QMainWindow):
         self.ui.setupUi(self)
 
         self._translate = QtCore.QCoreApplication.translate
-        self.ui.solvents.setText(self._translate("MainWindow", f"- Maximum of 12 solvents.\n- Maximum of 5 samples.\n\n- Heptane is not supported\n  n-heptane is.\n\n- Add 8 - 12 A-files.\n- Add 0 - 8 B-files.\n \n- Correct sample formats:\n  XYZ12345-#-#-1_rest\n  XYZ12345-#-#-S_A4_rest\n  XYZ12345678-#-#-3_rest\n  XYZ12345678-#-#-S_A6_rest  \n\n- For diluent use abbreviation:\n  'NMP', 'DMAC', 'DMI'.\n\n ")) # rename ui.solvents?
+        self.ui.solvents.setText(self._translate("MainWindow", f"- Maximum of 12 solvents.\n- Maximum of 5 samples.\n\n- Heptanes is not supported\n  n-heptane is.\n\n- Add 8 - 12 A-files.\n- Add 0 - 8 B-files.\n \n- Correct sample formats:\n  XYZ12345-#-#-1_rest\n  XYZ12345-#-#-S-A4_rest\n  XYZ12345678-#-#-3_rest\n  XYZ12345678-#-#-S-A6_rest  \n\n- For diluent use abbreviation:\n  'NMP', 'DMAC', 'DMI'.\n\n ")) # rename ui.solvents?
 
         # Remove window title bar:
         self.setWindowFlags(QtCore.Qt.FramelessWindowHint) 

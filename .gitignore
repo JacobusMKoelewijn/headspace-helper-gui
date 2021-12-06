@@ -1,6 +1,6 @@
 .venv/
-rawdata/
-CoA/
+Data/
+CoAs/
 *.xlsx
 dist/
 build/
