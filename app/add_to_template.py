@@ -21,7 +21,7 @@ class Template:
     def __init__(self):
         self.collected_messages = ""
         self.solvents = ""
-        self.wb = openpyxl.load_workbook(resource_path("HS_Quantification Template.xlsx"))
+        self.wb = openpyxl.load_workbook(resource_path("HS_Quantification Template (HH v 1.2).xlsx"))
 
     def create_solvent_sheets(self):
         """ Create a sheet for every solvent in [solvents] """
@@ -248,7 +248,7 @@ class Template:
         self.save_template()
         
     def save_template(self):
-        self.wb.save("HS_Quantification Template (processed).xlsx")
+        self.wb.save("HS_Quantification Template (HH v 1.2) (processed).xlsx")
         self.collected_messages += "\nA processed Template file has been created!\n"
 
     def return_collected_messages(self):
