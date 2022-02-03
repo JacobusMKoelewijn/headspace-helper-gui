@@ -21,7 +21,7 @@ class Template:
     def __init__(self):
         self.collected_messages = ""
         self.solvents = ""
-        self.wb = openpyxl.load_workbook(resource_path("HS_Quantification Template (HH v 1.2).xlsx"))
+        self.wb = openpyxl.load_workbook(resource_path("HS_Quantification Template (HH v 1.3).xlsx"))
 
     def create_solvent_sheets(self):
         """ Create a sheet for every solvent in [solvents] """
@@ -66,6 +66,16 @@ class Template:
             "G105", "G106", "G107", "G108", "G109", "G110", "G111", "G112", "G113", "G114", "G115", "G116", "G117", "G118", "G119", "G120", "G121", "G122", "G123", "G124", "G125", "G126", "G127", "G128", "G129", "G130", "G131", "G132", "G133", "G134", # 9. Sample(s) - V diluent (mL)
             "H105", "H106", "H107", "H108", "H109", "H110", "H111", "H112", "H113", "H114", "H115", "H116", "H117", "H118", "H119", "H120", "H121", "H122", "H123", "H124", "H125", "H126", "H127", "H128", "H129", "H130", "H131", "H132", "H133", "H134", # 9. Sample(s) - Sample Conc. (mg/mL)
             "M108", "M109", "M110", "M114", "M115", "M116", "M120", "M121", "M122", "M126", "M127", "M128", "M132", "M133", "M134", # 9. Sample(s) - Nom Spiked Conc (ug/mL)
+            "K105", "K111", "K117", "K123", "K129",
+            "L105", "L111", "L117", "L123", "L129",
+            "M105", "M111", "M117", "M123", "M129",
+            "N105", "N111", "N117", "N123", "N129",
+            "O105", "O111", "O117", "O123", "O129",
+            "P108", "P114", "P120", "P126", "P132",
+            "Q108", "Q114", "Q120", "Q126", "Q132",
+            "R108", "R114", "R120", "R126", "R132",
+            "S108", "S114", "S120", "S126", "S132",
+            "U108", "U114", "U120", "U126", "U132",
             ]
 
         # Add a reference to each cell that needs a reference:
@@ -248,7 +258,7 @@ class Template:
         self.save_template()
         
     def save_template(self):
-        self.wb.save("HS_Quantification Template (HH v 1.2) (processed).xlsx")
+        self.wb.save("HS_Quantification Template (HH v 1.3) (processed).xlsx")
         self.collected_messages += "\nA processed Template file has been created!\n"
 
     def return_collected_messages(self):

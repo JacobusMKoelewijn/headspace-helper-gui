@@ -243,7 +243,7 @@ class Ui_MainWindow(object):
         self.solvents_btn.setText(_translate("MainWindow", " Help menu"))
         self.information_top.setText(_translate("MainWindow", "TextLabel"))
         self.information_bottom.setText(_translate("MainWindow", "Ready for extraction!"))
-        self.app_info.setText(_translate("MainWindow", "Headspace Helper v 1.2  J. M. Koelewijn"))
+        self.app_info.setText(_translate("MainWindow", "Headspace Helper v 1.3  J. M. Koelewijn"))
         self.extract_data_btn.setText(_translate("MainWindow", " Extract data"))
 
 import icons_rc

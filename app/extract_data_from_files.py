@@ -18,7 +18,7 @@ def find_solvent_data(i, j):
         for line in lines:
 
             # Get data below [Peak Table (Ch1)] and ignore the rest:
-            if "[Peak Table (Ch1)]" in line:
+            if "[Peak Table(Ch1)]" in line:
                 peak_table_found = True
             
             if j in line and peak_table_found:
