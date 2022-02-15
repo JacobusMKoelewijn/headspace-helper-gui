@@ -1,2 +1,3 @@
-# workSmart
-A tool to help collect and add data from text files to excel templates.
+Automates the collection of data from various txt and pdf files and exports a complete Excel worksheet.
+
+

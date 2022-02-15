@@ -1,0 +1,15 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>icons/chevron-left_white.svg</file>
+    <file>icons/chevron-right_white.svg</file>
+    <file>icons/arrow-down-left_white.svg</file>
+    <file>icons/x_white.svg</file>
+    <file>icons/arrow-down-left.svg</file>
+    <file>icons/erlenmeyer.svg</file>
+    <file>icons/chevron-left.svg</file>
+    <file>icons/chevron-right.svg</file>
+    <file>icons/file-text.svg</file>
+    <file>icons/viinum_logo.svg</file>
+    <file>icons/x.svg</file>
+  </qresource>
+</RCC>

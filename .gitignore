@@ -1,14 +1,8 @@
 .venv/
 Data/
 CoAs/
-*.xlsx
 dist/
 build/
-workSmart.spec
-icons/
-icon.ico
 __pycache__/
 *.spec
-ui_interface.ui
-icons.qrc
 notes.txt
